@@ -1,22 +1,22 @@
-version: "3.4"
+version: '3.4'
 
 services:
   zookeeper:
     image: bitnami/zookeeper
     restart: always
     ports:
-      - "2181:2181"
+      - '2181:2181'
     volumes:
-      - "zookeeper_data:/bitnami"
+      - 'zookeeper_data:/bitnami'
     environment:
       - ALLOW_ANONYMOUS_LOGIN=yes
   kafka:
     image: bitnami/kafka
     ports:
-      - "9092:9092"
+      - '9092:9092'
     restart: always
     volumes:
-      - "kafka_data:/bitnami"
+      - 'kafka_data:/bitnami'
     environment:
       - ALLOW_PLAINTEXT_LISTENER=yes
       - KAFKA_CFG_ZOOKEEPER_CONNECT=zookeeper:2181
@@ -29,6 +29,7 @@ services:
       - zookeeper
   mysql:
     image: mysql:latest
+    command: --default-authentication-plugin=mysql_native_password
     restart: always
     environment:
       MYSQL_DATABASE: 'db'
@@ -41,12 +42,24 @@ services:
       - '3306'
     volumes:
       - mysql_data:/var/lib/mysql
+      - ./init.sql:/docker-entrypoint-initdb.d/init.sql
+  phpmyadmin:
+    image: phpmyadmin/phpmyadmin
+    restart: always
+    ports:
+      - 8080:80
+    environment:
+      PMA_HOST: mysql
+      MYSQL_USER: 'vaxidrez'
+      MYSQL_PASSWORD: 'VaxiDrez2005$$'
+      MYSQL_ROOT_PASSWORD: 'VaxiDrez2005$$'
+      PMA_ARBITRARY: 1 # Permite que el usuario ingrese cualquier servidor en phpMyAdmin
   mongodb:
     image: mongo:latest
     restart: always
     environment:
-      MONGO_INITDB_ROOT_USERNAME: "jsanchco"
-      MONGO_INITDB_ROOT_PASSWORD: "AdminBanking01"
+      MONGO_INITDB_ROOT_USERNAME: 'vaxidrez'
+      MONGO_INITDB_ROOT_PASSWORD: 'VaxiDrez2005$$'
     ports:
       - 27017:27017
     volumes:
@@ -56,11 +69,11 @@ services:
     container_name: mongoclient
     restart: always
     ports:
-      - "3000:3000"
+      - '3000:3000'
     environment:
       MONGO_URL: mongodb://vaxidrez:VaxiDrez2005$@mongodb:27017
       ROOT_URL: http://localhost
-      MONGOCLIENT_ENABLE_ADMIN: "true"
+      MONGOCLIENT_ENABLE_ADMIN: 'true'
     depends_on:
       - mongodb
 
