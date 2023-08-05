@@ -45,11 +45,24 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Banking.Account.Query.Domai
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Banking.Account.Query.Application", "Banking.Account.Query.Application\Banking.Account.Query.Application.csproj", "{7773DA2C-43F9-404D-BF45-7CE4D1062CB9}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Banking.Account.Query.Infrastructure", "Banking.Account.Query.Infrastructure\Banking.Account.Query.Infrastructure.csproj", "{89723F0F-5DD9-4FD5-A564-5CF1612EFD9B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Banking.Account.Query.Infrastructure", "Banking.Account.Query.Infrastructure\Banking.Account.Query.Infrastructure.csproj", "{89723F0F-5DD9-4FD5-A564-5CF1612EFD9B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Banking.Account.Query.Api", "Banking.Account.Query.Api\Banking.Account.Query.Api.csproj", "{79BAF442-F9FF-4C1C-A2AD-1C7E9229520B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Banking.Account.Query.Api", "Banking.Account.Query.Api\Banking.Account.Query.Api.csproj", "{79BAF442-F9FF-4C1C-A2AD-1C7E9229520B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Banking.Account.Query.Consumer", "Banking.Account.Query.Consumer\Banking.Account.Query.Consumer.csproj", "{E79B0BD4-9BC0-43F5-913F-125EB1F6A123}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Banking.Account.Query.Consumer", "Banking.Account.Query.Consumer\Banking.Account.Query.Consumer.csproj", "{E79B0BD4-9BC0-43F5-913F-125EB1F6A123}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{16A089FC-6C2D-486D-ACF3-870723C2EA71}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{6BA06D1D-10A6-42D7-ABEF-5CACB92A4B80}"
+	ProjectSection(SolutionItems) = preProject
+		..\Solution Items\Diagram.png = ..\Solution Items\Diagram.png
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "dockers", "dockers", "{CB89E66D-5080-481A-B93B-4DB429462483}"
+	ProjectSection(SolutionItems) = preProject
+		..\Solution Items\dockers\docker-compose.yml = ..\Solution Items\dockers\docker-compose.yml
+		..\Solution Items\dockers\docker-compose_kafka.yml = ..\Solution Items\dockers\docker-compose_kafka.yml
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -102,7 +115,9 @@ Global
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
+		{04B82EB2-73F4-49EA-9173-E072D827EBD7} = {16A089FC-6C2D-486D-ACF3-870723C2EA71}
 		{1D9C475B-7C9D-4A9F-8886-4358F09F96DC} = {04B82EB2-73F4-49EA-9173-E072D827EBD7}
+		{E21F0A99-C6BB-4ACC-87F4-B58E6E47BBFF} = {16A089FC-6C2D-486D-ACF3-870723C2EA71}
 		{C55050D5-2A90-4A21-8BB1-ECC1C4BDEDCE} = {1D9C475B-7C9D-4A9F-8886-4358F09F96DC}
 		{6F449803-F3E1-48CC-9990-053A436CAE4B} = {1D9C475B-7C9D-4A9F-8886-4358F09F96DC}
 		{092912B0-C726-4462-AC39-E9AF491618A1} = {E21F0A99-C6BB-4ACC-87F4-B58E6E47BBFF}
@@ -124,6 +139,7 @@ Global
 		{89723F0F-5DD9-4FD5-A564-5CF1612EFD9B} = {81C5EF2A-06C4-4B9C-8D16-0311C370EF1A}
 		{79BAF442-F9FF-4C1C-A2AD-1C7E9229520B} = {78698EA6-7330-4397-A976-4669F4550945}
 		{E79B0BD4-9BC0-43F5-913F-125EB1F6A123} = {ADFABC60-211F-4BA7-9868-DCA53B409BB0}
+		{CB89E66D-5080-481A-B93B-4DB429462483} = {6BA06D1D-10A6-42D7-ABEF-5CACB92A4B80}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {85C1F3E9-21DA-4471-BFC4-09581F94C6CB}
