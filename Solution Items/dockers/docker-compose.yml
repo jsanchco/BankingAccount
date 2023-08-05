@@ -45,13 +45,28 @@ services:
     image: mongo:latest
     restart: always
     environment:
-      MONGO_INITDB_ROOT_USERNAME: "vaxidrez"
-      MONGO_INITDB_ROOT_PASSWORD: "VaxiDrez2005$$"
+      MONGO_INITDB_ROOT_USERNAME: "jsanchco"
+      MONGO_INITDB_ROOT_PASSWORD: "AdminBanking01"
     ports:
       - 27017:27017
     volumes:
       - mongodb_data:/data/db
+  mongoclient:
+    image: mongoclient/mongoclient:latest
+    container_name: mongoclient
+    restart: always
+    ports:
+      - "3000:3000"
+    environment:
+      MONGO_URL: mongodb://vaxidrez:VaxiDrez2005$@mongodb:27017
+      ROOT_URL: http://localhost
+      MONGOCLIENT_ENABLE_ADMIN: "true"
+    depends_on:
+      - mongodb
+
 volumes:
+  mongoclient:
+    driver: local
   zookeeper_data:
     driver: local
   kafka_data:
