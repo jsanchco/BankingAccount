@@ -21,7 +21,7 @@ services:
       - ALLOW_PLAINTEXT_LISTENER=yes
       - KAFKA_CFG_ZOOKEEPER_CONNECT=zookeeper:2181
       - KAFKA_CFG_LISTENERS=PLAINTEXT://:9092,EXTERNAL://:9093  # Agrega un nuevo listener llamado EXTERNAL
-      - KAFKA_CFG_ADVERTISED_LISTENERS=PLAINTEXT://kafka:9092,EXTERNAL://localhost:9093  # Ajusta el advertised listener
+      - KAFKA_CFG_ADVERTISED_LISTENERS=PLAINTEXT://localhost:9092,EXTERNAL://localhost:9093  # Ajusta el advertised listener
       - KAFKA_CFG_AUTO_CREATE_TOPICS_ENABLE=true
       - KAFKA_CFG_LISTENER_SECURITY_PROTOCOL_MAP=PLAINTEXT:PLAINTEXT,EXTERNAL:PLAINTEXT  # Define el protocolo de seguridad para ambos listeners
       - KAFKA_CFG_INTER_BROKER_LISTENER_NAME=PLAINTEXT  # Especifica el nombre del listener interno
@@ -35,4 +35,3 @@ volumes:
 networks:
   default:
     name: bankingNetwork
-    external: true
