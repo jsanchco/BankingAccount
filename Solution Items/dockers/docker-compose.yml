@@ -29,7 +29,6 @@ services:
       - zookeeper
   mysql:
     image: mysql:latest
-    command: --default-authentication-plugin=mysql_native_password
     restart: always
     environment:
       MYSQL_DATABASE: 'db'
@@ -53,7 +52,6 @@ services:
       MYSQL_USER: 'vaxidrez'
       MYSQL_PASSWORD: 'VaxiDrez2005$$'
       MYSQL_ROOT_PASSWORD: 'VaxiDrez2005$$'
-      PMA_ARBITRARY: 1 # Permite que el usuario ingrese cualquier servidor en phpMyAdmin
   mongodb:
     image: mongo:latest
     restart: always
