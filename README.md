@@ -4,6 +4,9 @@
 https://www.udemy.com/course/microservices-net-kafka/
 
 
+# docker-compose:
+ docker-compose up -d
+
 
 # Connect to Mongo:
  http://localhost:3000/ 
