@@ -1,5 +1,9 @@
 # BankingAccount [Banking Account from Udemy]
- **Importate: Hay que degradar los paquetes de kafka a la versión: 1.4.4 -> nuget confluent.kafka 1.4.4**
+ **Importante: Hay que degradar los paquetes de kafka a la versión: 1.4.4 -> nuget confluent.kafka 1.4.4**
+
+https://www.udemy.com/course/microservices-net-kafka/
+
+
 
 # Connect to Mongo:
  http://localhost:3000/ 
