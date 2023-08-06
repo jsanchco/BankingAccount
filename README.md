@@ -5,7 +5,7 @@ https://www.udemy.com/course/microservices-net-kafka/
 
 
 # docker-compose:
- docker-compose up -d
+ Ir a la carpeta Solution Items/dockers  y  ejecutar: docker-compose up -d
 
 
 # Connect to Mongo:
